@@ -1,38 +1,116 @@
-.App {
+body{
+  height: 100vh;
+  background-image: url(.././img/cool-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+.titulo{
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.formulario{
   display: flex;
   flex-direction: column;
+  width: 80%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 0 auto;
+  gap: 20px;
+}
+.formulario input{
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  margin: 1px;
+}
+
+.agregar{
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  transition-property: background;
+  transition-duration: 500ms;
+
+}
+.agregar:hover{
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tasks{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  gap: 30px;
 }
+@media (min-width:768px) {
+  .tasks{
+    grid-template-columns: repeat(2, 1fr);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (min-width:1200px) {
+  .tasks{
+    grid-template-columns: repeat(4, 1fr);
+
   }
+}
+.task{
+  min-width: 200px;
+  height: 200px;
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba( 255, 255, 255, 0.35 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.borrar{
+  width: 150px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  transition-property: background;
+  transition-duration: 500ms;
+  background-color: red;
+  color: white;
+}
+.borrar:hover{
+  background-color: black;
+  color: white;
+}
+.borrar-todo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 30px auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  transition-property: background;
+  transition-duration: 500ms;
+  background-color: red;
+  color: white;
+}
+.borrar-todo:hover{
+  background-color: black;
+  color: white;
 }
